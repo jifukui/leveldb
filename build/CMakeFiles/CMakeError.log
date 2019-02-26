@@ -1,0 +1,215 @@
+Determining if the function crc32c_value exists in the crc32c failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_119b9/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_119b9.dir/build.make CMakeFiles/cmTC_119b9.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_119b9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crc32c_value   -std=c11 -o CMakeFiles/cmTC_119b9.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_119b9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_119b9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=crc32c_value    CMakeFiles/cmTC_119b9.dir/CheckFunctionExists.c.o  -o cmTC_119b9 -lcrc32c 
+/usr/bin/ld: cannot find -lcrc32c
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_119b9] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_119b9/fast] 错误 2
+
+
+Determining if the function malloc exists in the tcmalloc failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_80df6/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_80df6.dir/build.make CMakeFiles/cmTC_80df6.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_80df6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=malloc   -std=c11 -o CMakeFiles/cmTC_80df6.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.13/Modules/CheckFunctionExists.c
+<命令行>:0:23: 警告：与内建函数‘malloc’类型冲突 [默认启用]
+/usr/local/share/cmake-3.13/Modules/CheckFunctionExists.c:7:3: 附注：in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^
+Linking C executable cmTC_80df6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80df6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=malloc    CMakeFiles/cmTC_80df6.dir/CheckFunctionExists.c.o  -o cmTC_80df6 -ltcmalloc 
+/usr/bin/ld: cannot find -ltcmalloc
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_80df6] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_80df6/fast] 错误 2
+
+
+Determining if the fdatasync exist failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e753c/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e753c.dir/build.make CMakeFiles/cmTC_e753c.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e753c.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e753c.dir/CheckSymbolExists.c.o   -c /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: 在函数‘main’中:
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: 错误：‘fdatasync’未声明(在此函数内第一次使用)
+   return ((int*)(&fdatasync))[argc];
+                   ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: 附注：每个未声明的标识符在其出现的函数内只报告一次
+gmake[1]: *** [CMakeFiles/cmTC_e753c.dir/CheckSymbolExists.c.o] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_e753c/fast] 错误 2
+
+File /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fdatasync
+  return ((int*)(&fdatasync))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test HAVE_CLANG_THREAD_SAFETY failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e6303/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e6303.dir/build.make CMakeFiles/cmTC_e6303.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_e6303.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CLANG_THREAD_SAFETY -Werror   -std=c++11 -o CMakeFiles/cmTC_e6303.dir/src.cxx.o -c /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:2:34: 错误：‘lockable’属性指定被忽略 [-Werror=attributes]
+ struct __attribute__((lockable)) Lock {
+                                  ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:3:59: 错误：‘exclusive_lock_function’属性指定被忽略 [-Werror=attributes]
+   void Acquire() __attribute__((exclusive_lock_function()));
+                                                           ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:4:51: 错误：‘unlock_function’属性指定被忽略 [-Werror=attributes]
+   void Release() __attribute__((unlock_function()));
+                                                   ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:8:46: 错误：‘guarded_by’属性指定被忽略 [-Werror=attributes]
+   int data_ __attribute__((guarded_by(lock_)));
+                                              ^
+cc1plus: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_e6303.dir/src.cxx.o] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_e6303/fast] 错误 2
+
+Source file was:
+
+struct __attribute__((lockable)) Lock {
+  void Acquire() __attribute__((exclusive_lock_function()));
+  void Release() __attribute__((unlock_function()));
+};
+struct ThreadSafeType {
+  Lock lock_;
+  int data_ __attribute__((guarded_by(lock_)));
+};
+int main() { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE_CXX17_HAS_INCLUDE failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_2c1a8/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_2c1a8.dir/build.make CMakeFiles/cmTC_2c1a8.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_2c1a8.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CXX17_HAS_INCLUDE   -std=c++11 -o CMakeFiles/cmTC_2c1a8.dir/src.cxx.o -c /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:2:45: 错误：missing binary operator before token "("
+ #if defined(__has_include) &&  __has_include(<string>)
+                                             ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx: 在函数‘int main()’中:
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:5:14: 错误：‘string’不是‘std’的成员
+ int main() { std::string str; return 0; }
+              ^
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:5:26: 错误：expected ‘;’ before ‘str’
+ int main() { std::string str; return 0; }
+                          ^
+gmake[1]: *** [CMakeFiles/cmTC_2c1a8.dir/src.cxx.o] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_2c1a8/fast] 错误 2
+
+Source file was:
+
+#if defined(__has_include) &&  __has_include(<string>)
+#include <string>
+#endif
+int main() { std::string str; return 0; }
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e9e73/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e9e73.dir/build.make CMakeFiles/cmTC_e9e73.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e9e73.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e9e73.dir/CheckSymbolExists.c.o   -c /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e9e73
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9e73.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e9e73.dir/CheckSymbolExists.c.o  -o cmTC_e9e73 
+CMakeFiles/cmTC_e9e73.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0xa)：对‘pthread_create’未定义的引用
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_e9e73] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_e9e73/fast] 错误 2
+
+File /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_c2d43/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c2d43.dir/build.make CMakeFiles/cmTC_c2d43.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c2d43.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -std=c11 -o CMakeFiles/cmTC_c2d43.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c2d43
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2d43.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c2d43.dir/CheckFunctionExists.c.o  -o cmTC_c2d43 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_c2d43] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_c2d43/fast] 错误 2
+
+
+Performing C++ SOURCE FILE Test HAVE_KYOTOCABINET failed with the following output:
+Change Dir: /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_71d42/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_71d42.dir/build.make CMakeFiles/cmTC_71d42.dir/build
+gmake[1]: 进入目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_71d42.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_KYOTOCABINET   -std=c++11 -o CMakeFiles/cmTC_71d42.dir/src.cxx.o -c /home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp/src.cxx:2:22: 致命错误：kcpolydb.h：没有那个文件或目录
+ #include <kcpolydb.h>
+                      ^
+编译中断。
+gmake[1]: *** [CMakeFiles/cmTC_71d42.dir/src.cxx.o] 错误 1
+gmake[1]: 离开目录“/home/jifukui/leveldb/leveldb/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_71d42/fast] 错误 2
+
+Source file was:
+
+#include <kcpolydb.h>
+
+int main() {
+  kyotocabinet::TreeDB* db = new kyotocabinet::TreeDB();
+  delete db;
+  return 0;
+}
+  

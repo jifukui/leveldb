@@ -1,0 +1,35 @@
+# CMake generated Testfile for 
+# Source directory: /home/jifukui/leveldb/leveldb
+# Build directory: /home/jifukui/leveldb/leveldb
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(c_test "/home/jifukui/leveldb/leveldb/c_test")
+add_test(fault_injection_test "/home/jifukui/leveldb/leveldb/fault_injection_test")
+add_test(issue178_test "/home/jifukui/leveldb/leveldb/issue178_test")
+add_test(issue200_test "/home/jifukui/leveldb/leveldb/issue200_test")
+add_test(env_test "/home/jifukui/leveldb/leveldb/env_test")
+add_test(status_test "/home/jifukui/leveldb/leveldb/status_test")
+add_test(no_destructor_test "/home/jifukui/leveldb/leveldb/no_destructor_test")
+add_test(autocompact_test "/home/jifukui/leveldb/leveldb/autocompact_test")
+add_test(corruption_test "/home/jifukui/leveldb/leveldb/corruption_test")
+add_test(db_test "/home/jifukui/leveldb/leveldb/db_test")
+add_test(dbformat_test "/home/jifukui/leveldb/leveldb/dbformat_test")
+add_test(filename_test "/home/jifukui/leveldb/leveldb/filename_test")
+add_test(log_test "/home/jifukui/leveldb/leveldb/log_test")
+add_test(recovery_test "/home/jifukui/leveldb/leveldb/recovery_test")
+add_test(skiplist_test "/home/jifukui/leveldb/leveldb/skiplist_test")
+add_test(version_edit_test "/home/jifukui/leveldb/leveldb/version_edit_test")
+add_test(version_set_test "/home/jifukui/leveldb/leveldb/version_set_test")
+add_test(write_batch_test "/home/jifukui/leveldb/leveldb/write_batch_test")
+add_test(memenv_test "/home/jifukui/leveldb/leveldb/memenv_test")
+add_test(filter_block_test "/home/jifukui/leveldb/leveldb/filter_block_test")
+add_test(table_test "/home/jifukui/leveldb/leveldb/table_test")
+add_test(arena_test "/home/jifukui/leveldb/leveldb/arena_test")
+add_test(bloom_test "/home/jifukui/leveldb/leveldb/bloom_test")
+add_test(cache_test "/home/jifukui/leveldb/leveldb/cache_test")
+add_test(coding_test "/home/jifukui/leveldb/leveldb/coding_test")
+add_test(crc32c_test "/home/jifukui/leveldb/leveldb/crc32c_test")
+add_test(hash_test "/home/jifukui/leveldb/leveldb/hash_test")
+add_test(logging_test "/home/jifukui/leveldb/leveldb/logging_test")
+add_test(env_posix_test "/home/jifukui/leveldb/leveldb/env_posix_test")
