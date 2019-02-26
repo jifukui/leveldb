@@ -19,25 +19,29 @@
 #include "util/logging.h"
 
 namespace leveldb {
-
-static size_t TargetFileSize(const Options* options) {
+/**返回目标文件的大小*/
+static size_t TargetFileSize(const Options* options) 
+{
   return options->max_file_size;
 }
 
 // Maximum bytes of overlaps in grandparent (i.e., level+2) before we
 // stop building a single file in a level->level+1 compaction.
-static int64_t MaxGrandParentOverlapBytes(const Options* options) {
+static int64_t MaxGrandParentOverlapBytes(const Options* options) 
+{
   return 10 * TargetFileSize(options);
 }
 
 // Maximum number of bytes in all compacted files.  We avoid expanding
 // the lower level file set of a compaction if it would make the
 // total compaction cover more than this many bytes.
-static int64_t ExpandedCompactionByteSizeLimit(const Options* options) {
+static int64_t ExpandedCompactionByteSizeLimit(const Options* options) 
+{
   return 25 * TargetFileSize(options);
 }
 
-static double MaxBytesForLevel(const Options* options, int level) {
+static double MaxBytesForLevel(const Options* options, int level) 
+{
   // Note: the result for level zero is not really used since we set
   // the level-0 compaction threshold based on number of files.
 
@@ -50,12 +54,14 @@ static double MaxBytesForLevel(const Options* options, int level) {
   return result;
 }
 
-static uint64_t MaxFileSizeForLevel(const Options* options, int level) {
+static uint64_t MaxFileSizeForLevel(const Options* options, int level) 
+{
   // We could vary per level to reduce number of files?
   return TargetFileSize(options);
 }
 
-static int64_t TotalFileSize(const std::vector<FileMetaData*>& files) {
+static int64_t TotalFileSize(const std::vector<FileMetaData*>& files) 
+{
   int64_t sum = 0;
   for (size_t i = 0; i < files.size(); i++) {
     sum += files[i]->file_size;
@@ -63,7 +69,8 @@ static int64_t TotalFileSize(const std::vector<FileMetaData*>& files) {
   return sum;
 }
 
-Version::~Version() {
+Version::~Version() 
+{
   assert(refs_ == 0);
 
   // Remove from linked list
@@ -85,17 +92,22 @@ Version::~Version() {
 
 int FindFile(const InternalKeyComparator& icmp,
              const std::vector<FileMetaData*>& files,
-             const Slice& key) {
+             const Slice& key) 
+{
   uint32_t left = 0;
   uint32_t right = files.size();
-  while (left < right) {
+  while (left < right) 
+  {
     uint32_t mid = (left + right) / 2;
     const FileMetaData* f = files[mid];
-    if (icmp.InternalKeyComparator::Compare(f->largest.Encode(), key) < 0) {
+    if (icmp.InternalKeyComparator::Compare(f->largest.Encode(), key) < 0) 
+    {
       // Key at "mid.largest" is < "target".  Therefore all
       // files at or before "mid" are uninteresting.
       left = mid + 1;
-    } else {
+    } 
+    else 
+    {
       // Key at "mid.largest" is >= "target".  Therefore all files
       // after "mid" are uninteresting.
       right = mid;
